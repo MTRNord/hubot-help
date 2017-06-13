@@ -1,10 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
-module.exports = function (robot, scripts) {
+module.exports = (robot, scripts) => {
   const scriptsPath = path.resolve(__dirname, 'src')
 
-  fs.access(scriptsPath, function (error) {
+  fs.access(scriptsPath, (error) => {
     if (error) {
       throw error
     }
